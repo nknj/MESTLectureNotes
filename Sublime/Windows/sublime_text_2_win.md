@@ -39,7 +39,7 @@ Source: [Tuts+](https://tutsplus.com/course/improve-workflow-in-sublime-text-2/)
 
 * To enable `subl` in the command line, create an alias of subl in you bin folder by typing:
 
-```
+```bash
 bash: sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 cmd: doskey subl="C:\Program Files\Sublime Text 2\sublime_text.exe" $*
 ```
@@ -116,7 +116,7 @@ Link: [http://wbond.net/sublime_packages/package_control/installation](http://wb
 
 * To create snippet do this:
 
-```
+```xml
 <snippet>
 	<content><![CDATA[
 			Hello, ${1:this} is a ${2:snippet}.
@@ -152,7 +152,7 @@ Link: [http://wbond.net/sublime_packages/package_control/installation](http://wb
 	* To go up to the parent use `^`
 		* `.header>h1^.main` tab results in: (if you dont put anything before the dot, it defaults to div)
 
-		```
+		```html
 		<div class="header">
 			<h1></h1>
 		</div>
@@ -264,11 +264,12 @@ Optional:
 * Go back = ``Control+Windows+Alt+Left``
 * Manual CodeIntel = ``Control+Shift+space``
 * Might need to edit settings:
+
 ```json
 {
     "Python": {
-        "python": 'C:\Python27\python',
-        "pythonExtraPaths": ['C:\Python27\Lib\site-packages',]
+        "python": "C:\Python27\python",
+        "pythonExtraPaths": ["C:\Python27\Lib\site-packages",]
     },
 }
 ```
@@ -288,6 +289,7 @@ Optional:
 * You can use projects to only see specific folders and have specific settings for a particular porject
 * To create a project, open the folder and go to `Project > Save Project As`
 * To add specific folders, edit the `.sublime-settings` file and add more path objects like:
+	
 	```json
 	{
 		"folders":
@@ -305,6 +307,7 @@ Optional:
 	```
 
 * Django:
+
 	```json
 	{
 	"folders":
