@@ -132,6 +132,7 @@
 ### Creating and Basics
 - Create branch using `git branch branchName` and switch to it using `git checkout branchName`
     - Shortcut for these two commands is `git checkout -b branchName`
+    - Use `git checkout -b newBranchName branchOutOfName` to pick where to branch out of. Default is master.
 - Creating a branch creates a new working directory, when you checkout, you are actually switching directories  
 
 - `git log --all` to view a log across all branches
@@ -158,6 +159,7 @@
     2. Apply all the bugfix branch commits to the bugfix branch
     3. Apply all the commits in the master branch that were rewinded
 
+- Go to master ... git rebase <branchToMerge> ... resolve conflicts ... done
 - So, this removes all evidence of the branch ever existing and keeps the repository cleaner
 
 ## Remotes
@@ -241,16 +243,17 @@ int b = 2;
 
 ```bash
 git checkout -b mestTest2-master master
-
-# Isn't it possible for this to change? After the pull request the forker might add another update to the repo that might be different from the pull request commit. This might be a good solution: http://www.somethingorothersoft.com/2012/05/22/pulling-github-pull-requests-with-git/
 git pull https://github.com/mestTest2/ThreeJavaFiles.git master
 
-git checkout master
+# or:
+# git fetch origin pull/1/head:pr_1
+# replaces both commands on top
+# Reference: (http://www.somethingorothersoft.com/2012/05/22/pulling-github-pull-requests-with-git/)
 
+git checkout master
 git merge mestTest2-master
 
 # Resolve conflicts and commit if needed
-
 git push origin master
 ```
 
