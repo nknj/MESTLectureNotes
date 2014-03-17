@@ -182,7 +182,7 @@ Choice.objects.filter(poll__question="test?")
 Poll.objects.filter(choice__votes=3)
 # returns all the Polls that have a choice with 3 votes. This may have
 # duplicates if more that one choice has 3 votes. To avoid duplicates call
-# set([p for p in Poll.objects.filter(choice__votes=3)])
+# set(Poll.objects.filter(choice__votes=3))
 ```
 
 This is similar but different from:
