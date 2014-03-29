@@ -262,12 +262,14 @@ AUTH_USER_MODEL = 'appName.UserModelName'
 #### In `models.py`:
 
 Requirements:
+
 1. Integer pk
 2. Single unique identifier field
 3. A way to address they user in `short` and `long` form
 4. A email field called `email` (only if you want the default `PasswordResetForm` to work)
 
 Recommendations:
+
 1. `USERNAME_FIELD` must be defined (must be unique, used for login)
 2. `REQUIRED_FIELDS` must be defined (no need to re-include `USERNAME_FIELD`)
 3. `is_active` must be implement
