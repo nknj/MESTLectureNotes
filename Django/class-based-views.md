@@ -11,7 +11,6 @@ class MyView(View):
     result = "Hello"
 
     def get(self, request):
-        # <view logic>
         return HttpResponse(self.result)
 
     def post(self, request):
