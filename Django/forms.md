@@ -150,7 +150,6 @@ That is, if you have a `max-length` in your models, it will be present if you ad
         2. `Model.clean()` **<-- Can override this**
         3. `Model.validate_unique()`
 
-
 - `f.save()` will also run same validation if `is_valid` has not been called (because it calls `form.errors`)
     - It will return a `ValueError` if invalid
 

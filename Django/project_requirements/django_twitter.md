@@ -57,7 +57,7 @@ We are building a simple Twitter Clone using Django. This app will consist of ju
 - Show a list of users the user is following and is being followed by
     + All users are linked to their profiles
 
-#### Mentions Page [login-required]
+$$$#### Mentions Page [login-required]
 
 - URL: `/mentions`
 - Shows the tweets that the user has been mentioned in
